@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import UIKit
 
 struct ContentView: View {
     var body: some View {
@@ -13,7 +14,7 @@ struct ContentView: View {
             Image(systemName: "globe")
                 .imageScale(.large)
                 .foregroundStyle(.tint)
-            Text("Hello, world!")
+            Text("Hello, world!").font(.brand(.subheading))
         }
         .padding()
     }
@@ -22,3 +23,4 @@ struct ContentView: View {
 #Preview {
     ContentView()
 }
+
