@@ -11,7 +11,7 @@ import SwiftUI
 struct Coffee_Shop_MobileApp: App {
     var body: some Scene {
         WindowGroup {
-            Onboarding()
+            MainTabView()
         }
     }
 }

@@ -7,26 +7,38 @@
 
 import SwiftUI
 
+import SwiftUI
+
 struct CustomTabBar: View {
     
     @Binding var selected: TabItem
+    @Namespace private var animation
     
     var body: some View {
         HStack {
             ForEach(TabItem.allCases, id: \.self) { tab in
                 Button {
-                    withAnimation(.spring()) {
+                    withAnimation(.spring(response: 0.3, dampingFraction: 0.7)) {
                         selected = tab
                     }
                 } label: {
+                    
                     VStack(spacing: 6) {
-                        
                         Image(systemName: tab.icon)
                             .font(.system(size: 24))
                             .foregroundColor(selected == tab ? .brown : .gray)
-                        RoundedRectangle(cornerRadius: 3)
-                            .fill(selected == tab ? Color.brown : Color.clear)
-                            .frame(width: 20, height: 4)
+                        
+                        ZStack {
+                            if selected == tab {
+                                RoundedRectangle(cornerRadius: 3)
+                                    .fill(Color.brown)
+                                    .matchedGeometryEffect(id: "tabIndicator", in: animation)
+                                    .frame(width: 22, height: 4)
+                            } else {
+                                Color.clear
+                                    .frame(width: 22, height: 4)
+                            }
+                        }
                     }
                     .frame(maxWidth: .infinity)
                 }
@@ -40,5 +52,5 @@ struct CustomTabBar: View {
 }
 
 #Preview {
-    CustomTabBar(selected: .constant(.home))
+    CustomTabBar(selected: .constant(.favorites))
 }
