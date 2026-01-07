@@ -38,6 +38,7 @@ enum FontNameSora: String {
 // MARK: - Typography Tokens (Figma-like)
 
 enum TypographyStyle {
+    case title
     case heading
     case subheading
     case body
@@ -66,7 +67,9 @@ extension TypographyStyle {
             return .init(font: .regular, size: 12)
 
         case .button:
-            return .init(font: .semiBold, size: 14)
+            return .init(font: .semiBold, size: 16)
+        case .title:
+            return .init(font: .semiBold, size: 32)
         }
     }
 }
