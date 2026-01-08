@@ -1,5 +1,5 @@
 //
-//  Onboarding.swift
+//  OnboardingView.swift
 //  Coffee Shop Mobile
 //
 //  Created by Thiago Santos on 03/01/26.
@@ -7,7 +7,11 @@
 
 import SwiftUI
 
-struct Onboarding: View {
+struct OnboardingView: View {
+    
+    @ObservedObject var viewModel: OnboardingViewModel
+    @AppStorage("hasSeenOnboarding") var hasSeenOnboarding: Bool = false
+
     
     var body: some View {
         VStack {
@@ -16,7 +20,8 @@ struct Onboarding: View {
             Divider()
             HStack {
                 PrimaryButton(title: "Get Started") {
-                    
+                    viewModel.markAsSeen()
+                    hasSeenOnboarding = true
                 }
             }
             .padding(.horizontal, 20)
@@ -24,8 +29,4 @@ struct Onboarding: View {
         }.background(.black)
         Divider()
     }
-}
-
-#Preview {
-    Onboarding()
 }
