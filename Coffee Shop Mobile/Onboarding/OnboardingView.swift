@@ -15,8 +15,8 @@ struct OnboardingView: View {
     
     var body: some View {
         VStack {
-            OnboardingHeader()
-            OnboardingTexts()
+            OnboardingHeaderView()
+            OnboardingTextsView()
             Divider()
             HStack {
                 PrimaryButton(title: "Get Started") {
