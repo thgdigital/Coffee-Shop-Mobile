@@ -1,5 +1,5 @@
 //
-//  OnboardingTexts.swift
+//  OnboardingTextsView.swift
 //  Coffee Shop Mobile
 //
 //  Created by Thiago Santos on 07/01/26.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct OnboardingTexts: View {
+struct OnboardingTextsView: View {
     var body: some View {
         VStack {
             Text("Fall in Love with Coffee in Blissful Delight!").font(.brand(.title)).foregroundStyle(.white)
@@ -31,5 +31,5 @@ struct OnboardingTexts: View {
 }
 
 #Preview {
-    OnboardingTexts()
+    OnboardingTextsView()
 }
