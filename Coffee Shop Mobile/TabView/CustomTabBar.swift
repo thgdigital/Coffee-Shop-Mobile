@@ -23,15 +23,21 @@ struct CustomTabBar: View {
                     }
                 } label: {
                     
+                    let imageName: String = selected == tab ? tab.filled : tab.assetName
+                    
                     VStack(spacing: 6) {
-                        Image(systemName: tab.icon)
-                            .font(.system(size: 24))
-                            .foregroundColor(selected == tab ? .brown : .gray)
+                        
+                        ZStack {
+                            Image(imageName)
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: 22, height: 22)
+                        }
                         
                         ZStack {
                             if selected == tab {
                                 RoundedRectangle(cornerRadius: 3)
-                                    .fill(Color.brown)
+                                    .fill(.brownNormal)
                                     .matchedGeometryEffect(id: "tabIndicator", in: animation)
                                     .frame(width: 22, height: 4)
                             } else {
@@ -52,5 +58,5 @@ struct CustomTabBar: View {
 }
 
 #Preview {
-    CustomTabBar(selected: .constant(.favorites))
+    CustomTabBar(selected: .constant(.home))
 }
