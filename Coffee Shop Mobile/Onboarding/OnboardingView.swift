@@ -10,7 +10,7 @@ import SwiftUI
 struct OnboardingView: View {
     
     @ObservedObject var viewModel: OnboardingViewModel
-    @AppStorage("hasSeenOnboarding") var hasSeenOnboarding: Bool = false
+    @AppStorage(UserDefaultsKeys.onboarding.hasSeen) var hasSeenOnboarding: Bool = false
 
     
     var body: some View {

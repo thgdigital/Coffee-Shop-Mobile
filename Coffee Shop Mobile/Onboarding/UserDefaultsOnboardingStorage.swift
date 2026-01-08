@@ -14,13 +14,11 @@ protocol OnboardingStorage {
 
 class UserDefaultsOnboardingStorage: OnboardingStorage {
 
-    private let key = "hasSeenOnboarding"
-
     func setSeen(_ value: Bool) {
-        UserDefaults.standard.set(value, forKey: key)
+        UserDefaults.standard.set(value, forKey: UserDefaultsKeys.onboarding.hasSeen)
     }
 
     func hasSeen() -> Bool {
-        UserDefaults.standard.bool(forKey: key)
+        UserDefaults.standard.bool(forKey: UserDefaultsKeys.onboarding.hasSeen)
     }
 }

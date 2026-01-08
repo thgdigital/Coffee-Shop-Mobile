@@ -6,3 +6,10 @@
 //
 
 import Foundation
+
+enum UserDefaultsKeys {
+    
+    enum onboarding {
+        static let hasSeen = "hasSeenOnboarding"
+    }
+}
