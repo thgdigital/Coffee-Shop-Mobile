@@ -9,7 +9,7 @@ import SwiftUI
 
 struct HomeSectionHeaderView: View {
     
-    @State private var searchText = "Search coffee"
+    @State private var searchText = ""
     
     var body: some View {
         ZStack(alignment: .topLeading) {

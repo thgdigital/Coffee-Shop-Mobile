@@ -16,9 +16,14 @@ struct HomeSearchView: View {
                 Image(systemName: "magnifyingglass")
                     .foregroundColor(.gray)
                 
-                TextField("Search coffee", text: $text)
-                    .foregroundColor(.white)
-                    .textInputAutocapitalization(.never)
+                TextField(
+                    "",
+                    text: $text,
+                    prompt: Text("Search coffee")
+                        .foregroundColor(.white.opacity(0.6))
+                )
+                .foregroundColor(.white)
+                .textInputAutocapitalization(.never)
             }
             .padding(.horizontal, DS.Spacing.lg)
             .padding(.vertical, DS.Spacing.md)
