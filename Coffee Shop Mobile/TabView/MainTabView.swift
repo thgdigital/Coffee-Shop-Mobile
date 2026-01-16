@@ -17,7 +17,7 @@ struct MainTabView: View {
                 Group {
                     switch selectedTab {
                     case .home:
-                        BlankView()
+                        HomeView()
                     case .favorites:
                         BlankView()
                     case .bag:

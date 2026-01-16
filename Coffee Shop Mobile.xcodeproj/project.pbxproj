@@ -30,11 +30,6 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		754C6C952EE4F7A000323B75 /* Coffee Shop Mobile */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = "Coffee Shop Mobile";
-			sourceTree = "<group>";
-		};
 		754C6CA32EE4F7A700323B75 /* Coffee Shop MobileTests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = "Coffee Shop MobileTests";
@@ -43,6 +38,11 @@
 		754C6CAD2EE4F7A700323B75 /* Coffee Shop MobileUITests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = "Coffee Shop MobileUITests";
+			sourceTree = "<group>";
+		};
+		75E328652F105F5E004C56D0 /* Coffee Shop Mobile */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "Coffee Shop Mobile";
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -75,7 +75,7 @@
 		754C6C8A2EE4F7A000323B75 = {
 			isa = PBXGroup;
 			children = (
-				754C6C952EE4F7A000323B75 /* Coffee Shop Mobile */,
+				75E328652F105F5E004C56D0 /* Coffee Shop Mobile */,
 				754C6CA32EE4F7A700323B75 /* Coffee Shop MobileTests */,
 				754C6CAD2EE4F7A700323B75 /* Coffee Shop MobileUITests */,
 				754C6C942EE4F7A000323B75 /* Products */,
@@ -108,7 +108,7 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				754C6C952EE4F7A000323B75 /* Coffee Shop Mobile */,
+				75E328652F105F5E004C56D0 /* Coffee Shop Mobile */,
 			);
 			name = "Coffee Shop Mobile";
 			packageProductDependencies = (
