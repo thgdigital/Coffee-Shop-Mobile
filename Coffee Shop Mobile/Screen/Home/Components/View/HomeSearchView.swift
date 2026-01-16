@@ -1,5 +1,5 @@
 //
-//  HomeSearch.swift
+//  HomeSearchView.swift
 //  Coffee Shop Mobile
 //
 //  Created by Thiago Santos on 16/01/26.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct HomeSearch: View {
+struct HomeSearchView: View {
     @Binding var text: String
     
     var body: some View {
@@ -40,5 +40,5 @@ struct HomeSearch: View {
 }
 
 #Preview {
-    HomeSearch(text: .constant(""))
+    HomeSearchView(text: .constant(""))
 }

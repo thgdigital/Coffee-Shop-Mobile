@@ -44,6 +44,7 @@ enum TypographyStyle {
     case body
     case caption
     case button
+    case carouselButton
 }
 
 struct TypographyToken {
@@ -68,6 +69,8 @@ extension TypographyStyle {
 
         case .button:
             return .init(font: .semiBold, size: 16)
+        case .carouselButton:
+            return .init(font: .semiBold, size: 14)
         case .title:
             return .init(font: .semiBold, size: 32)
         }

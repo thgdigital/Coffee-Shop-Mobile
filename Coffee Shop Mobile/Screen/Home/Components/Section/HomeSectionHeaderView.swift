@@ -27,7 +27,7 @@ struct HomeSectionHeaderView: View {
                 
                 LocationHeaderView()
                 
-                HomeSearch(text: $searchText)
+                HomeSearchView(text: $searchText)
                 
                 PromoCardView()
                     .frame(height: DS.Sizes.promoCardHeight)
