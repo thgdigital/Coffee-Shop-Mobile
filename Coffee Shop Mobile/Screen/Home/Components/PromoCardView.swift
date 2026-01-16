@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct PromoCardView: View {
-        var body: some View {
+    var body: some View {
         ZStack(alignment: .leading) {
             
             Image("promoBackground")
@@ -32,6 +32,9 @@ struct PromoCardView: View {
                     .font(.brand(.title))
                     .foregroundColor(.white)
                     .shadow(radius: DS.Radius.xs)
+                    .multilineTextAlignment(.leading)
+                    .lineLimit(nil)
+                    .fixedSize(horizontal: false, vertical: true)
             }
             .padding(DS.Padding.xl)
         }
