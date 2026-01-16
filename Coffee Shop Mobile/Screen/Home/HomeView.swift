@@ -4,13 +4,12 @@ import SwiftUI
 struct HomeView: View {
     var body: some View {
             ZStack {
-    
                 ScrollView(showsIndicators: false) {
-                    VStack(spacing: 20) {
+                    VStack(spacing: DS.Spacing.xl) {
                         HomeSectionHeaderView()
                     }
                     .background(Color.white)
-                    .padding(.top, 0)
+                    .padding(.top, .zero)
                 }.ignoresSafeArea(edges: .top)
             }
         }

@@ -14,29 +14,29 @@ struct PromoCardView: View {
             Image("promoBackground")
                 .resizable()
                 .scaledToFill()
-                .frame(height: 160)
+                .frame(height: DS.Sizes.promoCardHeight)
                 .clipped()
-                .cornerRadius(26)
+                .cornerRadius(DS.Radius.lg)
             
-            VStack(alignment: .leading, spacing: 10) {
+            VStack(alignment: .leading, spacing: DS.Spacing.sm) {
                 
                 Text("Promo")
-                    .font(.system(size: 13, weight: .bold))
-                    .padding(.horizontal, 12)
-                    .padding(.vertical, 6)
+                    .font(.brand(.button))
+                    .padding(.horizontal, DS.Padding.md)
+                    .padding(.vertical, DS.Padding.sm)
                     .background(Color.red)
                     .foregroundColor(.white)
-                    .cornerRadius(12)
+                    .cornerRadius(DS.Radius.md)
                 
                 Text("Buy one get\none FREE")
                     .font(.brand(.title))
                     .foregroundColor(.white)
-                    .shadow(radius: 4)
+                    .shadow(radius: DS.Radius.xs)
             }
-            .padding(20)
+            .padding(DS.Padding.xl)
         }
-        .frame(height: 160)
-        .shadow(color: .black.opacity(0.15), radius: 8, y: 4)
+        .frame(height: DS.Sizes.promoCardHeight)
+        .shadow(color: .black.opacity(DS.Opacity.sm), radius: DS.Radius.sm, y: DS.Spacing.xs)
     }
 }
 

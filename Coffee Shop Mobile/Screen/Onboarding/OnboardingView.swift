@@ -24,8 +24,8 @@ struct OnboardingView: View {
                     hasSeenOnboarding = true
                 }
             }
-            .padding(.horizontal, 20)
-            .padding(.bottom, 50)
+            .padding(.horizontal, DS.Padding.xl)
+            .padding(.bottom, DS.Padding.xxxl)
         }.background(.black)
         Divider()
     }

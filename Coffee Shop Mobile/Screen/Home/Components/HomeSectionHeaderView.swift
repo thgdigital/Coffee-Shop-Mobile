@@ -21,21 +21,21 @@ struct HomeSectionHeaderView: View {
                 startPoint: .leading,
                 endPoint: .trailing
             )
-            .frame(height: 260)
+            .frame(height: DS.Sizes.headerHeight)
             
-            VStack(alignment: .leading, spacing: 20) {
+            VStack(alignment: .leading, spacing: DS.Spacing.xl) {
                 
                 LocationHeaderView()
                 
                 HomeSearch(text: $searchText)
                 
                 PromoCardView()
-                    .frame(height: 160)
-                    .cornerRadius(24)
-                    .shadow(radius: 10)
+                    .frame(height: DS.Sizes.promoCardHeight)
+                    .cornerRadius(DS.Radius.lg)
+                    .shadow(radius: DS.Radius.md)
             }
-            .padding(.top, 60)
-            .padding(.horizontal, 20)
+            .padding(.top, DS.Padding.xxxl)
+            .padding(.horizontal, DS.Padding.xl)
         }
     }
 }

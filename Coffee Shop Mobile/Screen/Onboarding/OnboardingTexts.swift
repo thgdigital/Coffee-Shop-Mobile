@@ -11,7 +11,7 @@ struct OnboardingTextsView: View {
     var body: some View {
         VStack {
             Text("Fall in Love with Coffee in Blissful Delight!").font(.brand(.title)).foregroundStyle(.white)
-                .padding([.leading, .trailing], 16)
+                .padding([.leading, .trailing], DS.Padding.lg)
                 .multilineTextAlignment(.center)
                 .frame(
                     maxWidth: .infinity,
@@ -20,7 +20,7 @@ struct OnboardingTextsView: View {
             Divider()
             
             Text("Welcome to our cozy coffee corner, where every cup is a delightful for you.").font(.brand(.caption)).foregroundStyle(.greyLighter)
-                .padding([.leading, .trailing], 8)
+                .padding([.leading, .trailing], DS.Padding.sm)
                 .multilineTextAlignment(.center)
                 .frame(
                     maxWidth: .infinity,
