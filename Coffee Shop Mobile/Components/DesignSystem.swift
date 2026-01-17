@@ -17,7 +17,7 @@ enum DS {
         static let xl: CGFloat = 20
         static let xxl: CGFloat = 32
     }
-
+    
     enum Radius {
         static let xs: CGFloat = 4
         static let sm: CGFloat = 8
@@ -25,11 +25,13 @@ enum DS {
         static let lg: CGFloat = 16
         static let xl: CGFloat = 24
     }
-
+    
     enum Sizes {
         static let headerHeight: CGFloat = 260
         static let promoCardHeight: CGFloat = 160
         static let searchHeight: CGFloat = 50
+        static let cardImageHeight: CGFloat = 150
+        static let cardSectionHeight: CGFloat = 238
     }
     
     enum Padding {

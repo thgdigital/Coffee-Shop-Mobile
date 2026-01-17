@@ -45,6 +45,7 @@ enum TypographyStyle {
     case caption
     case button
     case carouselButton
+    case rating
 }
 
 struct TypographyToken {
@@ -55,24 +56,23 @@ struct TypographyToken {
 extension TypographyStyle {
     var token: TypographyToken {
         switch self {
-        case .heading:
-            return .init(font: .bold, size: 24)
-
-        case .subheading:
-            return .init(font: .semiBold, size: 18)
-
-        case .body:
-            return .init(font: .regular, size: 14)
-
+        case .rating:
+            return .init(font: .semiBold, size: 8)
         case .caption:
             return .init(font: .regular, size: 12)
-
-        case .button:
-            return .init(font: .semiBold, size: 16)
+        case .body:
+            return .init(font: .regular, size: 14)
         case .carouselButton:
             return .init(font: .semiBold, size: 14)
+        case .button:
+            return .init(font: .semiBold, size: 16)
+        case .subheading:
+            return .init(font: .semiBold, size: 18)
+        case .heading:
+            return .init(font: .bold, size: 24)
         case .title:
             return .init(font: .semiBold, size: 32)
+        
         }
     }
 }
